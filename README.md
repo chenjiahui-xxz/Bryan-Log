@@ -105,3 +105,6 @@ https://mirrors.huaweicloud.com/elasticsearch/7.3.0/
 
 21.kibana新建了一个index，在索引模式下面得kibana里面创建索引后，就能看到数据啦
 ```
+
+### 最终
+**使用到了zookeeper，kafka，etcd，elasticsearch，kibnan。可以拉下来玩玩。还是挺好玩的收集系统。My name is Bryan**
