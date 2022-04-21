@@ -28,11 +28,11 @@ Bryan的日志收集系统，很好玩的一个文件输入后收集，就像你
 
 ## 踩过的坑记录
 ```
-0.安装kafak还有zoopkeeper下来后，改下日志位置把。
+0.安装kafak还有zoopkeeper下来后，最好修改下运行时kafka产生的日志位置，修改下面文件。
 kafka：.\config\server.properties
 zookeeper：.\config\zookeeper.properties
 
-1.开启zookeeper，kafak
+1.开启zookeeper，kafak，消费kafka命令。启动kafka需要事先启动zookeeper。可以分别安装。也可以使用kafka自带的zookeeper（我就是使用自带的）
 .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
 
 .\bin\windows\kafka-server-start.bat .\config\server.properties
