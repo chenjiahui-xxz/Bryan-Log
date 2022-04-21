@@ -17,4 +17,7 @@ Bryan的日志收集系统，很好玩的一个文件输入后收集，就像你
 ![图片名称](https://github.com/chenjiahui-xxz/IMG/blob/main/etcddemo.png)
 
 * 启动ByranLog服务，根据etcd中的参数配置开启监控文件实例，并且将数据收集发送到kafka
-![图片名称](https://github.com/chenjiahui-xxz/IMG/blob/main/runByranLog.png)
+![图片名称](https://github.com/chenjiahui-xxz/IMG/blob/main/runBryanLog.png)
+
+* 启动log_transfer服务，消费kafka中的数据，并且发送到elasticsearch
+![图片名称](https://github.com/chenjiahui-xxz/IMG/blob/main/runConsume.png)
