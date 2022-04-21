@@ -21,3 +21,7 @@ Bryan的日志收集系统，很好玩的一个文件输入后收集，就像你
 
 * 启动log_transfer服务，消费kafka中的数据，并且发送到elasticsearch
 ![图片名称](https://github.com/chenjiahui-xxz/IMG/blob/main/runConsume.png)
+
+* 启动kibnan服务，建立索引模式，将数据显示到页面来
+![图片名称](https://github.com/chenjiahui-xxz/IMG/blob/main/kibnan.png)
+![图片名称](https://github.com/chenjiahui-xxz/IMG/blob/main/showKibnan.png)
