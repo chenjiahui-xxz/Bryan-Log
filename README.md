@@ -1,5 +1,5 @@
 # Bryan-log
-Bryan的日志收集系统，很好玩的一个文件输入后收集，就像你在写日志将你写的日志收集起来，可以通过etcd配置，不需要重启服务就能够实时监听到需要收集的那些文件，通过etcd的watch监听。将收集到的信息通过管道发送到kafka里面。然后在起一个消费者服务，将kafka的数据进行消费，存储到elasticsearch中
+Bryan的日志收集系统，很好玩的一个文件输入后收集，就像你在写日志将你写的日志收集起来，可以通过etcd配置，不需要重启服务就能够实时监听到需要收集的那些文件，通过etcd的watch监听。将收集到的信息通过管道发送到kafka里面。然后在起一个消费者服务，将kafka的数据进行消费，存储到elasticsearch中，最后在kibnan中展示。相当于机器上日志收集系统，可以将服务器得日志收集上报到es中，通过kibnan显示出来。不用上机器可以直接在页面可视化观察日志
 
 ## 包名介绍
 * **ByranLog**：ByranLog为日志收集，会先初始化kafka实例，然后在连接etcd服务。拉去etcd中的配置来创建出需要的读取文件实例，同时还能实时的通过 __etcd.watch__ 监控etcd配置文件的变化，来决定是否新增新的配置读取文件实例，或者是删除配置文件中已经没有的实例。实现不需要ByranLog重启服务而能动态增删改灵活读取所需要的文件日志。将读取的到的文件内容通过go管道发送到kafka中进行持久化。如etcd中的配置 *[{"path":"D:\\studyGo\\s4.log","topic":"web_log"},{"path":"D:\\studyGo\\s5.log","topic":"s5_log"}]*，那就是分别创建两个收集文件的实例，监控 _D:\\studyGo\\s4.log_ ,和 _D:\\studyGo\\s5.log_ 文件，并且发送到kafka的 _web_log_ 和 _s5_log_ 的 __topic__ 中  
