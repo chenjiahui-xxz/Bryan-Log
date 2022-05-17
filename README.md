@@ -107,4 +107,4 @@ https://mirrors.huaweicloud.com/elasticsearch/7.3.0/
 ```
 
 ### 最终
-**使用到了zookeeper，kafka，etcd，elasticsearch，kibnan。可以拉下来玩玩。还是挺好玩的收集系统。My name is Bryan**
+**使用到了zookeeper，kafka，etcd，elasticsearch，kibnan。可以拉下来玩玩。还是挺好玩的收集系统。BryanLog UP！**
